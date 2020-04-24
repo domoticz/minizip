@@ -58,6 +58,12 @@
   #define ftello64 ftell
   #define fseeko64 fseek
  #endif
+#else // no msc
+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__APPLE__)
+ #define fopen64 fopen
+ #define ftello64 ftello
+ #define fseeko64 fseeko
+#endif
 #endif
 #endif
 
