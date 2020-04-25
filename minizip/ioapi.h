@@ -49,6 +49,11 @@
 #define ftello64 ftell
 #define fseeko64 fseek
 #else
+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__ANDROID__)
+ #define fopen64 fopen
+ #define ftello64 ftello
+ #define fseeko64 fseeko
+#endif
 #ifdef _MSC_VER
  #define fopen64 fopen
  #if (_MSC_VER >= 1400) && (!(defined(NO_MSCVER_FILE64_FUNC)))
@@ -60,7 +65,6 @@
  #endif
 #endif
 #endif
-
 /*
 #ifndef ZPOS64_T
   #ifdef _WIN32
