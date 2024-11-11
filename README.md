@@ -4,13 +4,17 @@ Based on the original work of [Gilles Vollant](http://www.winimage.com/zLibDll/m
 
 ### Usage in a CMake project
 
+```cmake
 add_subdirectory (minizip)
 target_link_libraries(${PROJECT_NAME} minizip)
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/minizip)
+```
 
 In your code you can use it like
 
+```c
 #include <minizip/zip.h>
+```
 
 ### Requirement:
 
@@ -18,7 +22,7 @@ In your code you can use it like
 
 ### Usage of library
 
-```
+```c
 #include <minizip/miniunz.h>
 
 unzip(src, dst);
