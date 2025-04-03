@@ -1,7 +1,7 @@
 #***************************************************************************
 # Copyright (C) 2020 Robbert E. Peters (GizMoCuz)
 #***************************************************************************
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.16.0)
 
 project("minizip" C)
 
